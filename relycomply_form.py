@@ -13,7 +13,7 @@ if st.session_state['api_token'] is None:
     api_token = st.text_input("API Token", type="password")
     if st.button("Submit"):
         st.session_state['api_token'] = api_token
-        st.experimental_rerun()
+        st.rerun()
 else:
     client = RelyComplyGQLClient(st.session_state['api_token'])
 

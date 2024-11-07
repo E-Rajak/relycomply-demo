@@ -15,7 +15,7 @@ if st.session_state['api_token'] is None:
         st.session_state['api_token'] = api_token
         st.rerun()
 else:
-    client = RelyComplyGQLClient(st.session_state['api_token'])
+    client = RelyComplyGQLClient(token=st.session_state['api_token'])
 
     customer_tab, document_tab = st.tabs(["Create Customer", "Create Document"])
 
